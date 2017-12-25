@@ -1,0 +1,10 @@
+<view class="container">
+<view class='spider-si'></view>
+  <view class='loading'>
+    <view class='avatar-box'>
+       <image class="avatar" src="/images/spider.png"></image>
+    </view>
+     <text class="motto">{{loading}}%</text>
+     <text class="motto desc" bindtap="endTap">{{loadText}}</text>
+  </view>
+</view>

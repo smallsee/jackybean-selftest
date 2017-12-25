@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/end/end",
+    "pages/load/load",
+    "pages/choice/choice"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#405f80"
+  }
+}

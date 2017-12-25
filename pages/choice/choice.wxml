@@ -1,0 +1,21 @@
+<view class="container">
+  <view class='avatar-box'>
+    <image class="avatar" src="{{choiceData.imgSrc}}"></image>
+  </view>
+    <text class="motto">{{choiceData.title}}</text>
+
+    <block wx:for="{{choiceData.answer}}" wx:for-item="item" wx:for-index="idx">
+        <view class="journey-container"  bindtap="choiceTap" data-choiceId="{{item.grade}}">
+            <text class="journey">{{item.title}}</text>
+        </view>
+    </block>
+
+
+     <view class="journey-container in-end" bindtap="startTap">
+        <text class="journey">重新检测</text>
+    </view>
+
+    <!-- <view class='image-bg'>
+      <image src='/images/avatar.jpg'></image>
+    </view> -->
+</view>

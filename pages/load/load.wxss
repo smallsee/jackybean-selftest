@@ -1,0 +1,108 @@
+@keyframes xiaohai-translateY{
+  0%{
+     transform: translateY(-55rpx);
+  }
+  100%{
+     transform: translateY(-135rpx);
+  }
+}
+
+@keyframes xiaohai-height{
+  0%{
+    height: 600rpx;
+  }
+  100%{
+    height: 460rpx;
+  }
+}
+
+@keyframes opacity{
+  0%{
+    opacity: 1;
+    box-shadow: 0px 0px 2px #888888;
+  }
+  10%{
+    opacity: 0.8
+  }
+  20%{
+    opacity: 1
+  }
+  30%{
+    opacity: 0.5
+  }
+  40%{
+    opacity: 1
+  }
+  50%{
+    box-shadow: 20px 0px 5px #888888;
+    opacity: 0.5
+  }
+  60%{
+    opacity: 1
+  }
+  70%{
+    opacity: 0.5
+  }
+  80%{
+    opacity: 1
+  }
+  90%{
+    opacity: 0.5
+  }
+  100%{
+    box-shadow: 0px 0px 0px #888888;
+    opacity: 1
+  }
+}
+
+.container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    background-color:#b3d4db;
+}
+
+.spider-si{
+  width: 4rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  background-color: black;
+       animation:xiaohai-height 3s linear;
+    animation-fill-mode: forwards; 
+}
+.loading{
+      display: flex;
+    flex-direction:column;
+    transform: translateY(-55rpx);
+     animation:xiaohai-translateY 3s linear;
+    animation-fill-mode: forwards; 
+}
+
+.desc{
+  animation:opacity 3s linear;
+  animation-fill-mode: forwards;
+}
+.avatar-box{
+      width:200rpx;
+    height:200rpx;
+    border-radius: 50%;
+    overflow: hidden
+}
+.avatar{
+    margin:  0 auto;
+    width:200rpx;
+    height:200rpx;
+    border-radius: 50%;
+
+}
+.motto{
+    margin-top:50rpx;
+    font-size:32rpx;
+    font-weight: bold;
+    text-align: center
+}
+
+page{
+    height: 100%;
+    background-color:#b3d4db;
+}
