@@ -1,0 +1,32 @@
+<view class="container">
+
+ <swiper current="{{currentTab}}"  vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}"  bindchange='startmove'>
+
+
+ 
+<block wx:for="{{choiceData}}" wx:for-item="item" wx:for-index="idx">
+    <swiper-item >
+          <view class='avatar-box'>
+            <image class="avatar" src="{{item.imgSrc}}"></image>
+          </view>
+          <text class="motto">{{item.title}}</text>
+
+            <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
+                <view class="journey-container"  bindtap="choiceTap" data-choiceId="{{answer.grade}}">
+                    <text class="journey">{{answer.title}}</text>
+                </view>
+            </block>
+
+
+        <!-- <view class='image-bg'>
+          <image src='/images/avatar.jpg'></image>
+        </view> -->
+    </swiper-item>
+</block>
+  
+</swiper>
+
+  <view class="journey-container in-end" bindtap="startTap">
+                <text class="journey">重新检测</text>
+  </view>
+</view>
