@@ -1,10 +1,26 @@
 <view class="container">
-<view class='avatar-box'>
+<!-- <view class='avatar-box'>
     <image class="avatar" src="/images/avatar.jpg"></image>
-</view>
-    <text class="motto">总结罗</text>
+</view> -->
+    <!-- <text class="motto">总结罗</text>
     <view class="journey-container">
         <text class="journey">{{choice}}</text>
+    </view> -->
+
+ <view class="journey-container">
+        <text class="journey">平台建设：{{design}}</text>
+    </view>
+     <view class="journey-container">
+        <text class="journey">个人形象传播：{{self}}</text>
+    </view>
+     <view class="journey-container">
+        <text class="journey">渠道传播：{{trench}}</text>
+    </view>
+     <view class="journey-container">
+        <text class="journey">行业传播：{{diffuse}}</text>
+    </view>
+     <view class="journey-container">
+        <text class="journey">总分：{{total}}</text>
     </view>
 
 

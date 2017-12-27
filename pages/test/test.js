@@ -3,6 +3,14 @@ Page({
   data:{
     currentTab: 0,
   },
+  onShareAppMessage: function () {
+    return {
+      title: '魔豆品牌自测力系统',
+      desc: '魔豆品牌自测力系统!',
+      imageUrl: '/images/modou_banner.jpg',
+      path: '/pages/start/start'
+    }
+  },
   onLoad: function (option) {
     //改变数据序号
     this.getChoiceIndex();
@@ -68,14 +76,14 @@ Page({
       choiceId: 0
     })
     wx.redirectTo({
-      url: "../test/test"
+      // url: "../test/test"
+      url: "../start/start"
     })
   },
   startmove: function(e){
     var that = this
     var choiceIndex = wx.getStorageSync('choice_index')
-    console.log(choiceIndex)
-    console.log(e)
+ 
 
     if (choiceIndex != e.detail.current) {
       that.setData({

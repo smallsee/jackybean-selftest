@@ -6,9 +6,9 @@
  
 <block wx:for="{{choiceData}}" wx:for-item="item" wx:for-index="idx">
     <swiper-item >
-          <view class='avatar-box'>
+          <!-- <view class='avatar-box'>
             <image class="avatar" src="{{item.imgSrc}}"></image>
-          </view>
+          </view> -->
           <text class="motto">{{item.title}}</text>
 
             <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">

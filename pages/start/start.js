@@ -1,4 +1,12 @@
 Page({
+  onShareAppMessage: function () {
+    return {
+      title: '魔豆品牌自测力系统',
+      desc: '魔豆品牌自测力系统!',
+      imageUrl: '/images/modou_banner.jpg',
+      path: '/pages/start/start'
+    }
+  },
   onTap: function (event) {
     var choiceIndex = wx.getStorageSync('choice_index')
     var choiceId = wx.getStorageSync('choice_id')
