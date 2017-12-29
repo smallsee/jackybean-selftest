@@ -18,7 +18,7 @@
 
         <view class='question'>
           <text class='sign'>平台建设</text>
-          <text class='title'>{{item.title}}</text>
+          <text class="title {{item.title.length >= 18 ? 'title_small':'title'}}">{{item.title}}</text>
         </view>
 
         <view wx:if="{{item.answer.length == 2}}" class='answer'>

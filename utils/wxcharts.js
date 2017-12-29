@@ -937,7 +937,7 @@ function drawPieText(series, opts, config, context, radius, center) {
         context.closePath();
         context.fill();
         context.beginPath();
-        context.setFillStyle('#666666');
+        context.setFillStyle('#ffffff');
         context.fillText(item.text, textStartX, textPosition.y + 3);
         context.closePath();
         context.stroke();
@@ -1299,7 +1299,7 @@ function drawXAxis(categories, opts, config, context) {
     }
 
     context.beginPath();
-    context.setStrokeStyle(opts.xAxis.gridColor || "#cccccc");
+    context.setStrokeStyle(opts.xAxis.gridColor || "#ffffff");
 
     if (opts.xAxis.disableGrid !== true) {
         if (opts.xAxis.type === 'calibration') {
@@ -1468,6 +1468,7 @@ function drawLegend(series, opts, config, context) {
                     context.closePath();
                     context.beginPath();
                     context.setLineWidth(1);
+                    //上边颜色
                     context.setStrokeStyle('#ffffff');
                     context.setFillStyle(item.color);
                     context.moveTo(startX + 7.5, startY + 5);
@@ -1495,7 +1496,8 @@ function drawLegend(series, opts, config, context) {
             }
             startX += padding + shapeWidth;
             context.beginPath();
-            context.setFillStyle(opts.extra.legendTextColor || '#333333');
+            //下面颜色
+            context.setFillStyle(opts.extra.legendTextColor || '#ffffff');
             context.fillText(item.name, startX, startY + 9);
             context.closePath();
             context.stroke();

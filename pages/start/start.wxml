@@ -6,7 +6,7 @@
         <text class="journey">开启魔豆自测之旅</text>
     </view> -->
     <view class='image-bg'>
-          <image src='/images/index.jpg'></image>
+          <image src='/images/start.jpg'></image>
     </view>
 
     <view class='start' bindtap="onTap"></view>

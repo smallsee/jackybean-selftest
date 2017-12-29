@@ -11,10 +11,19 @@ Page({
     }
   },
   onLoad: function (option) {
+    var that = this
     var choice = wx.getStorageSync('choice_id')
     this.setData({
       choice: choice
     });
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          user: res.userInfo
+        })
+      }
+    })
+
     this.totalPoint(choice)
   },
   totalPoint: function (choice) {

@@ -13,11 +13,11 @@
 .start{
   margin-left:  -190rpx;
   left: 50%;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+   /* background-color: rgba(0, 0, 0, 0.5);  */
   position: absolute;
   width: 380rpx;
-  height: 80rpx;
-  bottom: 100rpx; 
+  height: 90rpx;
+  bottom: 105rpx; 
 }
 /* .avatar-box{
       margin-top:160rpx;

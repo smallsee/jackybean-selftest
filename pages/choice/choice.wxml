@@ -1,21 +1,45 @@
 <view class="container">
-  <view class='avatar-box'>
-    <image class="avatar" src="{{choiceData.imgSrc}}"></image>
-  </view>
-    <text class="motto">{{choiceData.title}}</text>
 
-    <block wx:for="{{choiceData.answer}}" wx:for-item="item" wx:for-index="idx">
-        <view class="journey-container"  bindtap="choiceTap" data-choiceId="{{item.grade}}">
-            <text class="journey">{{item.title}}</text>
+  <swiper current="{{currentTab}}" vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}" bindchange='startmove'>
+
+    <block wx:for="{{choiceData}}" wx:for-item="item" wx:for-index="idx">
+      <swiper-item>
+        <!-- <text class="motto">{{item.title}}</text>
+
+            <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
+                <view class="journey-container"  bindtap="choiceTap" data-choiceId="{{answer.grade}}">
+                    <text class="journey">{{answer.title}}</text>
+                </view>
+            </block> -->
+
+        <view class='image-bg'>
+          <image src='{{item.bgImg}}'></image>
         </view>
+
+        <view class='question'>
+          <text class='sign'>{{idx +1 }}</text>
+          <text class="title {{item.title.length >= 18 ? 'title_small':'title'}}">{{item.title}}</text>
+        </view>
+
+        <view wx:if="{{item.answer.length == 2}}" class='answer'>
+               <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
+                <text class='answer-title' bindtap="choiceTap" data-choiceId="{{answer.grade}}">{{answer.title}}</text>
+            </block> 
+        </view>
+
+        <view wx:if="{{item.answer.length == 4}}" class='answer2'>
+                       <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
+                <text class='answer2-title' bindtap="choiceTap" data-choiceId="{{answer.grade}}">{{answer.title}}</text>
+            </block> 
+        </view>
+      </swiper-item>
     </block>
 
+  </swiper>
 
-     <view class="journey-container in-end" bindtap="startTap">
-        <text class="journey">重新检测</text>
-    </view>
 
-    <!-- <view class='image-bg'>
-      <image src='/images/avatar.jpg'></image>
-    </view> -->
+  <view class='reset' bindtap="startTap"></view>
+    <!-- <view class="journey-container in-end" bindtap="startTap">
+                <text class="journey">重新检测</text>
+  </view>   -->
 </view>

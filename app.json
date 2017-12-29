@@ -1,11 +1,16 @@
 {
   "pages": [
-        "pages/start/start",
-        "pages/test/test",
+      "pages/choice/choice",
+                "pages/start/start",
+                "pages/end/end",
 
-    "pages/end/end",
-    "pages/load/load",
-    "pages/choice/choice"
+
+     
+
+
+          "pages/test/test",
+    
+    "pages/load/load"
   ],
   "window": {
     "navigationBarBackgroundColor": "#405f80"

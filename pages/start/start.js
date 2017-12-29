@@ -19,8 +19,8 @@ Page({
     wx.setStorageSync('choice_index', 0);
     wx.setStorageSync('choice_id', 0);
     wx.redirectTo({
-      // url: "../choice/choice"
-      url: "../test/test"
+      url: "../choice/choice"
+      // url: "../test/test"
     });
   },
   onLoad: function () {
