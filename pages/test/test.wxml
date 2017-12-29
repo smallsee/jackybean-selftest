@@ -1,32 +1,43 @@
 <view class="container">
 
- <swiper current="{{currentTab}}"  vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}"  bindchange='startmove'>
+  <swiper current="{{currentTab}}" vertical="{{false}}" indicator-dots="{{false}}" autoplay="{{false}}" bindchange='startmove'>
 
-
- 
-<block wx:for="{{choiceData}}" wx:for-item="item" wx:for-index="idx">
-    <swiper-item >
-          <!-- <view class='avatar-box'>
-            <image class="avatar" src="{{item.imgSrc}}"></image>
-          </view> -->
-          <text class="motto">{{item.title}}</text>
+    <block wx:for="{{choiceData}}" wx:for-item="item" wx:for-index="idx">
+      <swiper-item>
+        <!-- <text class="motto">{{item.title}}</text>
 
             <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
                 <view class="journey-container"  bindtap="choiceTap" data-choiceId="{{answer.grade}}">
                     <text class="journey">{{answer.title}}</text>
                 </view>
-            </block>
+            </block> -->
 
+        <view class='image-bg'>
+          <image src='{{item.bgImg}}'></image>
+        </view>
 
-        <!-- <view class='image-bg'>
-          <image src='/images/avatar.jpg'></image>
-        </view> -->
-    </swiper-item>
-</block>
-  
-</swiper>
+        <view class='question'>
+          <text class='sign'>平台建设</text>
+          <text class='title'>{{item.title}}</text>
+        </view>
 
-  <view class="journey-container in-end" bindtap="startTap">
+        <view wx:if="{{item.answer.length == 2}}" class='answer'>
+               <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
+                <text class='answer-title' bindtap="choiceTap" data-choiceId="{{answer.grade}}">{{answer.title}}</text>
+            </block> 
+        </view>
+
+        <view wx:if="{{item.answer.length == 4}}" class='answer2'>
+                       <block wx:for="{{item.answer}}" wx:for-item="answer" wx:for-index="idx_q">
+                <text class='answer2-title' bindtap="choiceTap" data-choiceId="{{answer.grade}}">{{answer.title}}</text>
+            </block> 
+        </view>
+      </swiper-item>
+    </block>
+
+  </swiper>
+
+    <!-- <view class="journey-container in-end" bindtap="startTap">
                 <text class="journey">重新检测</text>
-  </view>
+  </view>   -->
 </view>

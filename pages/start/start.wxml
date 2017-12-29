@@ -1,10 +1,15 @@
 <view class="container">
-<view class='avatar-box'>
+<!-- <view class='avatar-box'>
     <image class="avatar" src="/images/avatar.jpg"></image>
   </view>
     <view class="journey-container" bindtap="onTap">
         <text class="journey">开启魔豆自测之旅</text>
+    </view> -->
+    <view class='image-bg'>
+          <image src='/images/index.jpg'></image>
     </view>
+
+    <view class='start' bindtap="onTap"></view>
 
 
      <!-- <view class="journey-container in-end">

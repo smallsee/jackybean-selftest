@@ -7,7 +7,7 @@
         <text class="journey">{{choice}}</text>
     </view> -->
 
- <view class="journey-container">
+   <!-- <view class="journey-container">
         <text class="journey">平台建设：{{design}}</text>
     </view>
      <view class="journey-container">
@@ -18,10 +18,16 @@
     </view>
      <view class="journey-container">
         <text class="journey">行业传播：{{diffuse}}</text>
-    </view>
+    </view> -->
      <view class="journey-container">
         <text class="journey">总分：{{total}}</text>
     </view>
+
+
+    <canvas canvas-id="pieCanvas" class="canvas" style="width:250px;height:250px" bindtouchstart="touchHandler"></canvas>
+
+    <text class="evaluate">{{totalText}}</text>
+
 
 
      <view class="journey-container in-end" bindtap="startTap">

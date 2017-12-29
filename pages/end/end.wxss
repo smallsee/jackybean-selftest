@@ -2,6 +2,8 @@
     display: flex;
     flex-direction:column;
     align-items: center;
+    box-sizing: border-box;
+    padding: 0 20rpx;
 }
 .avatar-box{
       margin-top:160rpx;
@@ -55,4 +57,13 @@ page{
 .in-end{
   position: fixed;
   bottom: 50rpx;
+}
+
+.evaluate{
+  text-align: center;
+  font-size:26rpx;
+    font-weight: bold;
+    line-height:45rpx;
+    color: #405f80;
+    margin-top: 40rpx;
 }
